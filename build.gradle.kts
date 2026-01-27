@@ -2,7 +2,7 @@ plugins {
     java
     application
     jacoco
-    id("com.gradleup.shadow") version "9.0.0-beta4"
+    id("com.gradleup.shadow") version "9.3.1"
 }
 
 group = "edu.luc.cs"
