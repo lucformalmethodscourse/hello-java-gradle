@@ -61,17 +61,3 @@ tasks.shadowJar {
         attributes["Main-Class"] = application.mainClass.get()
     }
 }
-
-// Add task aliases for Maven users
-tasks.register("package") {
-    dependsOn(tasks.shadowJar)
-    group = "build"
-    description = "Creates a standalone executable JAR (alias for shadowJar)"
-}
-
-tasks.register<JavaExec>("exec") {
-    group = "application"
-    description = "Executes the main class (alias for run)"
-    classpath = sourceSets.main.get().runtimeClasspath
-    mainClass.set(application.mainClass)
-}
